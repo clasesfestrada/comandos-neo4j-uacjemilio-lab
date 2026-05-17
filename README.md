@@ -365,11 +365,13 @@ Incluir:
 
 Responder:
 
-1. ¿Qué ventajas tienen las bases de datos de grafos?
-2. ¿Qué diferencia existe entre relaciones en grafos y llaves foráneas?
-3. ¿Qué ventajas observó al utilizar Cypher?
-4. ¿Qué consultas fueron más fáciles de representar en Neo4j?
-5. ¿Qué dificultades encontró?
+1. ¿Qué ventajas tienen las bases de datos de grafos? Es más facil relacionar registros, pues no tenemos necesidad de usar llaves foráneas; de hecho, las relaciones son entidades independientes y fisicas, que nos permiten navegar por la base de datos. 
+2. ¿Qué diferencia existe entre relaciones en grafos y llaves foráneas? Qué las llaves foráneas deben estar presentes en nuestra tabla, caso contrario en
+las bases de datos de grafos, donde no son necesarias a la hora de hacer relaciones, además de que las relaciones pueden contener sus propias propiedades. 
+3. ¿Qué ventajas observó al utilizar Cypher? Es intuitivo, escribir una relación imaginando una flecha resulta sencillo y gratificante a la hora de 
+realizar las consultas. 
+4. ¿Qué consultas fueron más fáciles de representar en Neo4j? Todas donde hacíamos match a los nodos. 
+5. ¿Qué dificultades encontró? A la hora de importar los datos a neo4j encontré complicado transferirlos correctamente (raw). También encontré complicado realizar una consulta donde teníamos que relacionar 3 clases de nodos.
 
 ---
 
