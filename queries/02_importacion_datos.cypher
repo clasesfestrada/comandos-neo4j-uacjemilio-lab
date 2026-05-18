@@ -39,7 +39,7 @@ MATCH (e:Estudiante {id: row.estudiante_id})
 
 MATCH (m:Materia {id: row.materia_id})
 
-MERGE (e)-[r:Inscribe]->(m)
+MERGE (e)-[r:INSCRITO_EN]->(m)
 SET r.calificacion = toFloat(row.calificacion);
 
 
@@ -51,7 +51,7 @@ MATCH (eo:Estudiante {id: row.estudiante_origen})
 
 MATCH (ed:Estudiante {id: row.estudiante_destino})
 
-MERGE (eo)-[r:Amigo]->(ed)
+MERGE (eo)-[r:AMIGO_DE]->(ed)
 
 
 LOAD CSV WITH HEADERS FROM 
@@ -62,4 +62,4 @@ MATCH (p:profesor {id: row.profesor_id})
 
 MATCH (m:Materia{id: row.materia_id})
 
-MERGE (p)-[r:imparte]->(m)
+MERGE (p)-[r:IMPARTE]->(m)
