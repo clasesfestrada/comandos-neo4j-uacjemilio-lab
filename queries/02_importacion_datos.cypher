@@ -1,5 +1,5 @@
 LOAD CSV WITH HEADERS FROM
-'https://github.com/clasesfestrada/comandos-neo4j-uacjemilio-lab/raw/7e86c139fe09e4913c23f2528d3d7a79f4c9f9ec/data/estudiantes.csv'
+'https://raw.githubusercontent.com/clasesfestrada/comandos-neo4j-uacjemilio-lab/7e86c139fe09e4913c23f2528d3d7a79f4c9f9ec/data/estudiantes.csv'
 AS row
 
 CREATE (:Estudiante {
@@ -10,7 +10,7 @@ CREATE (:Estudiante {
 });
 
 LOAD CSV WITH HEADERS FROM
-"https://github.com/clasesfestrada/comandos-neo4j-uacjemilio-lab/raw/7e86c139fe09e4913c23f2528d3d7a79f4c9f9ec/data/materias.csv"
+"https://raw.githubusercontent.com/clasesfestrada/comandos-neo4j-uacjemilio-lab/7e86c139fe09e4913c23f2528d3d7a79f4c9f9ec/data/materias.csv"
 AS row
 
 CREATE (:Materia {
@@ -21,7 +21,7 @@ CREATE (:Materia {
 
 
 LOAD CSV WITH HEADERS FROM
-"https://github.com/clasesfestrada/comandos-neo4j-uacjemilio-lab/raw/7e86c139fe09e4913c23f2528d3d7a79f4c9f9ec/data/profesores.csv"
+"https://raw.githubusercontent.com/clasesfestrada/comandos-neo4j-uacjemilio-lab/7e86c139fe09e4913c23f2528d3d7a79f4c9f9ec/data/materias.csv"
 AS row
 
 CREATE (:Profesor{
@@ -32,7 +32,7 @@ CREATE (:Profesor{
 
 
 LOAD CSV WITH HEADERS FROM 
-"https://github.com/clasesfestrada/comandos-neo4j-uacjemilio-lab/raw/7e86c139fe09e4913c23f2528d3d7a79f4c9f9ec/data/inscripciones.csv"
+"https://raw.githubusercontent.com/clasesfestrada/comandos-neo4j-uacjemilio-lab/7e86c139fe09e4913c23f2528d3d7a79f4c9f9ec/data/inscripciones.csv"
 AS row
 
 MATCH (e:Estudiante {id: row.estudiante_id})
@@ -44,7 +44,7 @@ SET r.calificacion = toFloat(row.calificacion);
 
 
 LOAD CSV WITH HEADERS FROM 
-"https://github.com/clasesfestrada/comandos-neo4j-uacjemilio-lab/raw/7e86c139fe09e4913c23f2528d3d7a79f4c9f9ec/data/amistades.csv"
+"https://raw.githubusercontent.com/clasesfestrada/comandos-neo4j-uacjemilio-lab/7e86c139fe09e4913c23f2528d3d7a79f4c9f9ec/data/amistades.csv"
 AS row
 
 MATCH (eo:Estudiante {id: row.estudiante_origen})
@@ -55,7 +55,7 @@ MERGE (eo)-[r:AMIGO_DE]->(ed)
 
 
 LOAD CSV WITH HEADERS FROM 
-"https://github.com/clasesfestrada/comandos-neo4j-uacjemilio-lab/raw/7e86c139fe09e4913c23f2528d3d7a79f4c9f9ec/data/imparticiones.csv"
+"https://raw.githubusercontent.com/clasesfestrada/comandos-neo4j-uacjemilio-lab/7e86c139fe09e4913c23f2528d3d7a79f4c9f9ec/data/imparticiones.csv
 AS row
 
 MATCH (p:profesor {id: row.profesor_id})
