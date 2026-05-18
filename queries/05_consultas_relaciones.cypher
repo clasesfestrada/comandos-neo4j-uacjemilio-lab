@@ -1,4 +1,4 @@
-MATCH p=(a)-[:Amigo]->()
+MATCH p=(a)-[:AMIGO_DE>()
 WHERE a.nombre = "Ana"
 RETURN p;
 
