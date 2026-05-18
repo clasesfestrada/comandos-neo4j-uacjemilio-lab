@@ -2,7 +2,7 @@ MATCH p=(a)-[:AMIGO_DE>()
 WHERE a.nombre = "Ana"
 RETURN p;
 
-MATCH (ana:Estudiante {nombre: "Ana"})-[:AMIGO_DE->(amigo:Estudiante)-[:Inscribe]->(materia:Materia)
+MATCH (ana:Estudiante {nombre: "Ana"})-[:AMIGO_DE](amigo:Estudiante)-[:Inscribe]->(materia:Materia)
 RETURN amigo.nombre AS Amigo, materia.nombre AS Materia;
 
 MATCH (ana:Estudiante {nombre: "Ana"})-[:AMIGO_DE]->(amigo:Estudiante)-[:Inscribe]->(materia:Materia)-[i:imparte]-(mi:profesor)
