@@ -24,7 +24,7 @@ LOAD CSV WITH HEADERS FROM
 "https://github.com/clasesfestrada/comandos-neo4j-uacjemilio-lab/raw/7e86c139fe09e4913c23f2528d3d7a79f4c9f9ec/data/profesores.csv"
 AS row
 
-CREATE (:profesor{
+CREATE (:Profesor{
   id: row.id,
   nombre: row.nombre,
   departamento: row.departamento
