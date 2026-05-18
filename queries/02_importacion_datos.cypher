@@ -21,7 +21,7 @@ CREATE (:Materia {
 
 
 LOAD CSV WITH HEADERS FROM
-"https://raw.githubusercontent.com/clasesfestrada/comandos-neo4j-uacjemilio-lab/7e86c139fe09e4913c23f2528d3d7a79f4c9f9ec/data/materias.csv"
+"https://raw.githubusercontent.com/clasesfestrada/comandos-neo4j-uacjemilio-lab/7e86c139fe09e4913c23f2528d3d7a79f4c9f9ec/data/profesores.csv"
 AS row
 
 CREATE (:Profesor{
@@ -55,7 +55,7 @@ MERGE (eo)-[r:AMIGO_DE]->(ed)
 
 
 LOAD CSV WITH HEADERS FROM 
-"https://raw.githubusercontent.com/clasesfestrada/comandos-neo4j-uacjemilio-lab/7e86c139fe09e4913c23f2528d3d7a79f4c9f9ec/data/imparticiones.csv
+"https://raw.githubusercontent.com/clasesfestrada/comandos-neo4j-uacjemilio-lab/7e86c139fe09e4913c23f2528d3d7a79f4c9f9ec/data/imparticiones.csv"
 AS row
 
 MATCH (p:profesor {id: row.profesor_id})
